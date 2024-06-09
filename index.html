@@ -6,11 +6,56 @@
     <title>Music App</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
-    <audio id="audioPlayer"></audio>
+    <div class="general_container">
+        <nav class="nav_bar">
+            <ul class="nav_link">
+                <li class="nav_circle"><i class="fa-solid fa-angle-right"></i></li>
+                <li class="nav_circle"><i class="fa-solid fa-bars"></i></li>
+            </ul>
+        </nav>
+        <div class="content_container">
+            <img src="./assets/img/images(1).jpeg" alt="song cover image" id="song_cover_image">
+            <h3 class="artistic_name" id="artistic_name">Ebuka Songs</h3>
+            <p class="sogn_title" id="sogn_title">Calling my name</p>
+            <audio controls id="song" style="display: none;">
+                <source src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyricall/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3" type=/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">
+            </audio>
+            <div class="controls_icons">
+                <div onclick="prevSong()"><i class="fa-solid fa-backward-step" id="backwardSong"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play" id="playPauseSong"></i></div>
+                <div onclick="nextSong()"><i class="fa-solid fa-forward-step" id="forwardSong"></i></div>
+                <div onclick="toggleRepeat()"><i class="fa-solid fa-repeat" id="repeatSong"></i></div>
+            </div>
+            <div class="time_container">
+                <span id="current_time">00:00</span> <input type="range" name="" id="step_going" value="0"> <span id="duration_time">00:00</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="songs_list" class="songs_list">
+        <h3>All Track</h3>
+        <ul>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Ebuka Songs <br> Calling my name </li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 2</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 3</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 4</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 5</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Ebuka Songs <br> Calling my name </li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 2</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 3</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 4</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Ebuka Songs <br> Calling my name </li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 2</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 3</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 4</li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Ebuka Songs <br> Calling my name </li>
+            <li data-src="./assets/music/Ebuka_Songs_-_Calling_my_name__I_am_a_Soldier___Lyrics_____Just_Lyrically(133).mp3">Song 2</li>
+        </ul>
+    </div>
 
     <script src="./script.js"></script>
 </body>
